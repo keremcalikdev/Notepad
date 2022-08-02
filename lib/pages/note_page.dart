@@ -28,7 +28,7 @@ class _NotePageState extends State<NotePage> {
   }
 
   void noteEdit(note) {
-    if (controller.text != '' && controller1.text != '') {
+    if (controller.text != '' || controller1.text != '') {
       note.update(
           title: controller.text, text: controller1.text, editTime: todayDate);
       noteData!.remove(note);
